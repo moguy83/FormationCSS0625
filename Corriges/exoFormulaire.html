@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de réservation</title>
+  <link rel="stylesheet" href="exoFormulaire.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Réservation de voyage</h1>
+    <form>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required>
+
+      <label for="formule">Formule de voyage :</label>
+      <select id="formule" name="formule" required>
+        <option value="">-- Choisissez une formule --</option>
+        <option value="decouverte">Découverte</option>
+        <option value="aventure">Aventure</option>
+        <option value="luxe">Luxe</option>
+      </select>
+
+      <label for="arrivee">Date d’arrivée :</label>
+      <input type="date" id="arrivee" name="arrivee" required>
+
+      <label for="depart">Date de départ :</label>
+      <input type="date" id="depart" name="depart" required>
+
+      <label for="personnes">Nombre de personnes :</label>
+      <input type="number" id="personnes" name="personnes" min="1" required>
+
+      <label for="chambre">Type de chambre :</label>
+      <select id="chambre" name="chambre" required>
+        <option value="">-- Choisissez --</option>
+        <option value="2lits">2 lits</option>
+        <option value="3lits">3 lits</option>
+        <option value="4lits">4 lits</option>
+        <option value="vueMer">Vue sur la mer</option>
+      </select>
+
+      <label for="coupon">Code de coupon :</label>
+      <input type="text" id="coupon" name="coupon">
+
+      <label class="checkbox">
+        <input type="checkbox" id="conditions" name="conditions" required>
+        J’accepte les conditions générales
+      </label>
+
+      <button type="submit">Valider la réservation</button>
+    </form>
+  </div>
+</body>
+</html>
