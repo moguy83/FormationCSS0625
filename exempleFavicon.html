@@ -1,0 +1,18 @@
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.png" type="image/png">
+
+
+<script>
+function setFavicon(url) {
+  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/png';
+  link.rel = 'icon';
+  link.href = url;
+  document.head.appendChild(link);
+}
+
+// Exemple : changer après 2 secondes
+setTimeout(() => {
+  setFavicon('autre-favicon.png');
+}, 2000);
+</script>

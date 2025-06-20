@@ -1,15 +1,18 @@
+/* Menu principal */
 #menu {
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: #333;
-  display: flex;
 }
 
+/* Menu horizontal */
 #menu > li {
+  float: left;
   position: relative;
 }
 
+/* Liens */
 #menu a {
   display: block;
   color: white;
@@ -18,27 +21,33 @@
   background-color: #333;
 }
 
+/* Hover effet sur le lien */
 #menu a:hover {
   background-color: #444;
 }
 
+/* Sous-menu caché par défaut */
 .sousmenu {
   display: none;
   position: absolute;
-  top: 100%;
+  /* top: 100%; en dessous du parent */
   left: 0;
   background-color: #444;
   list-style: none;
   padding: 0;
   margin: 0;
   min-width: 160px;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
+/* Lien dans le sous-menu */
 .sousmenu li a {
   padding: 10px;
+  display: block;
+  color: white;
 }
 
-#menu li:hover > .sousmenu {
+/* Afficher le sous-menu au survol */
+#menu li:hover .sousmenu {
   display: block;
 }
